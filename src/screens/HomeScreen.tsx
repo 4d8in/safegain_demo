@@ -18,14 +18,12 @@ export const HomeScreen = ({ navigation }: { navigation: any }) => {
   return (
     <SafeAreaView style={styles.safeArea} edges={['top', 'bottom']}>
       <ScreenShell title={`Hello, ${user.name}`} subtitle="Your money is working smarter.">
-        <></>
-      </ScreenShell>
-      <ScrollView contentContainerStyle={styles.content}>
-        <View style={styles.heroCard}>
-          <Text style={styles.heroLabel}>Monthly profit</Text>
-          <Text style={styles.heroAmount}>${netProfit.toFixed(0)}</Text>
-          <Text style={styles.heroHint}>Based on your current settings • {profitPercent}% profit • {savingsPercent}% savings</Text>
-        </View>
+        <ScrollView contentContainerStyle={styles.content}>
+          <View style={styles.heroCard}>
+            <Text style={styles.heroLabel}>Monthly profit</Text>
+            <Text style={styles.heroAmount}>${netProfit.toFixed(0)}</Text>
+            <Text style={styles.heroHint}>Based on your current settings • {profitPercent}% profit • {savingsPercent}% savings</Text>
+          </View>
 
         <View style={styles.grid}>
           {accounts.map((account) => (
@@ -50,7 +48,8 @@ export const HomeScreen = ({ navigation }: { navigation: any }) => {
           <Text style={styles.muted}>Savings moved: ${savings.toFixed(0)}</Text>
           <Text style={styles.muted}>Net profit: ${netProfit.toFixed(0)}</Text>
         </View>
-      </ScrollView>
+        </ScrollView>
+      </ScreenShell>
     </SafeAreaView>
   );
 };
