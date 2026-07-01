@@ -1,17 +1,26 @@
 {
   "expo": {
-    "name": "safegain-expo",
-    "slug": "safegain-expo",
+    "name": "SafeGain Demo",
+    "slug": "safegain-demo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme": "safegain",
+    "platforms": ["ios", "android"],
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/0d77d3a2-bf1b-4d4f-8fac-385c8c4d81ca"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#F0FDF4",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -20,6 +29,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0d77d3a2-bf1b-4d4f-8fac-385c8c4d81ca"
+      }
     }
   }
 }
